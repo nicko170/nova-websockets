@@ -3,10 +3,11 @@
 namespace Vemcogroup\Websockets;
 
 use BeyondCode\LaravelWebSockets\Apps\App;
+use BeyondCode\LaravelWebSockets\Contracts\AppManager;
 use Vemcogroup\Websockets\Models\App as DatabaseApp;
-use BeyondCode\LaravelWebSockets\Apps\AppProvider;
 
-class SocketProvider implements AppProvider
+
+class SocketProvider implements AppManager
 {
     /**
      * @return array
