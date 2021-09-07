@@ -34,7 +34,7 @@ class SocketProvider implements AppManager
      * @param string $appKey
      * @return App|null
      */
-    public function findByKey(string $appKey): ?App
+    public function findByKey($appKey): ?App
     {
         $app = DatabaseApp::where('key', $appKey)->first();
 
@@ -45,7 +45,7 @@ class SocketProvider implements AppManager
      * @param string $appSecret
      * @return App|null
      */
-    public function findBySecret(string $appSecret): ?App
+    public function findBySecret($appSecret): ?App
     {
         $app = DatabaseApp::where('secret', $appSecret)->first();
 
